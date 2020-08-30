@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul,nav{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+a:hover{
+    background-color: blue;
+}
+
+a.contact-button{
+    padding: 15px 35px;
+    background: crimson;
+    border-radius: 50px;
+    color: #fff;
+}
+
+nav{
+    background-color: #000;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    padding: 35px 100px 0;
+}
+header h2{
+    text-transform: uppercase;
+}
+header nav{
+    display: flex;
+}
+header nav li{
+    margin: 0 15px;
+}
+header nav li:first-child{
+    margin-left:0
+}
+header nav li:last-child{
+    margin-right:0
+}
+
+@media(max-width:1000px){
+    header{
+        padding: 20px 50px;
+    }
+}
+
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    header h2{
+        margin-bottom:15px;
+    }
+    header nav li{
+        margin: 0 7px;
+    }
+}
+/*banner code*/
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 110px 100px;
+}
+@media(max-width:1000px){
+    section{
+        padding: 20px 50px;
+    }
+}
+@media(max-width:600px){
+    section{
+        padding: 125px 30px;
+    }
+}
+section p{
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+/*First section of website, banner*/
+.banner{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align:center;
+}
+.banner .banner-image{
+    background-image: url(tech.jpg);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    z-index:-1;
+}
+
+.banner .banner-image:after{
+    content:'';
+    position: absolute;
+    top:0; 
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: #000;
+    opacity: .5;
+}
+.banner h1{
+    margin-bottom: 15px;
+    font-size: 70px;
+    font-family: merienda;
+}
+.banner h3{
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+@media(max-width:800px){
+    .banner{
+        min-height: 600px;
+    }
+    .banner h1{
+        font-size: 35px;
+    }
+    .banner h3{
+        font-size: 15px;
+    }
+    .banner .banner-image{
+        background-position: center;
+        background-color: #000;
+    }
+}
+
+/*about me section*/
+ul.aboutme-content{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aboutme-content li{
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutme-left{
+    flex-basis: 50%;
+    height: 450px;
+    background-image: url(Malaika.JPG);
+}
+.aboutme-right{
+    flex-basis: 50%;
+    height: 450px;
+}
+.aboutme p{
+    max-height: 800px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 5px;
+}
+.section-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+@media(max-width: 1000px){
+    .aboutme-left, .aboutme-right{
+        flex-basis: 100%;
+    }
+    .aboutme-content li{
+        padding: 10px;
+    }
+}
+
+/*Skills section*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 25%;
+    padding: 20px;
+  }
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+    }
+  }
+  
+ 
+
+/*Project section*/
+ul.myproject-content{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.myproject-content li{
+    padding: 40px;
+    
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.myproject1-left{
+    flex-basis: 50%;
+    height: 400px;
+    background-image: url(civic.png);
+}
+.myproject2-left{
+    flex-basis: 50%;
+    height: 400px;
+    background-image: url(project2.JPG);
+}
+.myproject3-left{
+    flex-basis: 50%;
+    height: 400px;
+    background-image: url(fit.png);
+}
+.myproject4-left{
+    flex-basis: 50%;
+    height: 400px;
+    background-image: url(task.png);
+}
+
+.myproject-right{
+    flex-basis: 50%;
+}
+.myproject p{
+    text-align: left;
+    max-height: 800px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding-left: 5px;
+    
+}
+@media(max-width: 1000px){
+    .myproject1-left, .myproject2-left,.myproject3-left,
+    .myproject4-left,.myproject-right{
+        flex-basis: 100%;
+    }
+    .myproject-content li{
+        padding: 10px;
+    }
+}
+
+/*Contact me*/
+ul.contactme-content{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 15px 15px;
+   
+}
+.contactme-content li{
+    padding: 10px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 60px 0;
+    font-size: 20px;
+}
+
+/*Styles*/
+#contact{
+    background-color: #ccc;
+}
+#code{
+    background-color: #ccc;
+}
+#aboutme{
+    background-color: antiquewhite;
+}
+#myproject{
+    background-color: antiquewhite;
+}
