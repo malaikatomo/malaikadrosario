@@ -245,7 +245,7 @@ ul.myproject-content{
 .myproject2-left{
     flex-basis: 50%;
     height: 400px;
-    background-image: url(project2.JPG);
+    background-image: url(project2.jpg);
 }
 .myproject3-left{
     flex-basis: 50%;
